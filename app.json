@@ -15,16 +15,53 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bitcode": false
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nucletic.time",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1dcf59c8-d68e-42ba-b5b7-57b6367a4900"
+      },
+      "SECRET_KEY": "284c83f4dc565aa5170460c44e94de89f79487b2f19a5e72370e7c5d962a9573",
+      "FIREBASE_API_KEY": "AIzaSyD_9-bD_TEWhRdsk8lOpHeYebYAkWUmz1c",
+      "FIREBASE_AUTH_DOMAIN": "timecapsulemessenger.firebaseapp.com",
+      "FIREBASE_PROJECT_ID": "timecapsulemessenger",
+      "FIREBASE_STORAGE_BUCKET": "timecapsulemessenger.appspot.com",
+      "FIREBASE_MESSAGEING_SENDER_ID": "518379961887",
+      "FIREBASE_APP_ID": "1: 518379961887:web:afc184f6aa6a46b298df2a",
+      "FIREBASE_MESUREMENT_ID": "G-DC3RCQPS1"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
+      "@react-native-google-signin/google-signin",
+      "@config-plugins/react-native-webrtc"
+    ],
+    "scheme": "time",
+    "owner": "nucletic"
   }
 }
